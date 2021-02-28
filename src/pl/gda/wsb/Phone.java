@@ -1,12 +1,12 @@
 package pl.gda.wsb;
 
 public class Phone {
-    String model;
+    String producent;
     String kolorObudowy;
     double wielkoscEkranu;
 
-    public Phone(String model, String kolorObudowy, double wielkoscEkranu) {
-        this.model = model;
+    public Phone(String producent, String kolorObudowy, double wielkoscEkranu) {
+        this.producent = producent;
         this.kolorObudowy = kolorObudowy;
         this.wielkoscEkranu = wielkoscEkranu;
     }
