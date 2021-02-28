@@ -14,10 +14,10 @@ public class Main {
         Phone telefon1 = new Phone("iPhone", "czerwony", 5.5);
         Phone telefon2 = new Phone("Samsung", "szary", 5.7);
         System.out.println("Imie: " + czlowiek1.imie);
-        System.out.println("Model telefonu: " + telefon1.producent);
+        System.out.println("Model telefonu: " + telefon1.model);
         System.out.println("Rodzaj zwierzecia: " + zwierze1.nazwaZwierzecia);
         System.out.println("Imie: " + czlowiek2.imie);
-        System.out.println("Model telefonu: " + telefon2.producent);
+        System.out.println("Model telefonu: " + telefon2.model);
         System.out.println("Rodzaj zwierzecia: " + zwierze2.nazwaZwierzecia);
 
         if(zwierze1.waga > zwierze2.waga){
