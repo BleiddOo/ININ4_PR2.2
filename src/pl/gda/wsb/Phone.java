@@ -1,7 +1,7 @@
 package pl.gda.wsb;
 
 public class Phone {
-    String model;
+    String producent;
     String kolorObudowy;
     double wielkoscEkranu;
 
