@@ -1,6 +1,7 @@
 package pl.gda.wsb;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -11,6 +12,7 @@ public class Main {
         Animal zwierze2 = new Animal("Kot","Ssak",5);
         Human czlowiek1 = new Human("Adam",22,"niebieski");
         Human czlowiek2 = new Human("Karol",30,"zielony");
+        Human czlowiek3 = new Human("Jan",15,"zielony");
         Phone telefon1 = new Phone("iPhone", "czerwony", 5.5);
         Phone telefon2 = new Phone("Samsung", "szary", 5.7);
         System.out.println("Imie: " + czlowiek1.imie);
@@ -28,6 +30,18 @@ public class Main {
         }
         else{
             System.out.println("Zwierzeta waza tyle samo: " + zwierze1.waga + "kg");
+        }
+        ArrayList<Human> humanslist = new ArrayList<>();
+        humanslist.add(czlowiek1);
+        humanslist.add(czlowiek2);
+
+        for(Human human : humanslist){
+            System.out.println(human.imie);
+        }
+        humanslist.add(czlowiek3);
+        System.out.println("-------------");
+        for(Human human : humanslist){
+            System.out.println(human.imie);
         }
     }
 }
