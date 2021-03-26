@@ -1,7 +1,6 @@
 package pl.gda.wsb;
 
 import java.sql.SQLOutput;
-import java.util.ArrayList;
 
 public class Main {
 
@@ -12,7 +11,6 @@ public class Main {
         Animal zwierze2 = new Animal("Kot","Ssak",5);
         Human czlowiek1 = new Human("Adam",22,"niebieski");
         Human czlowiek2 = new Human("Karol",30,"zielony");
-        Human czlowiek3 = new Human("Jan", 15,"niebieski");
         Phone telefon1 = new Phone("iPhone", "czerwony", 5.5);
         Phone telefon2 = new Phone("Samsung", "szary", 5.7);
         System.out.println("Imie: " + czlowiek1.imie);
@@ -22,34 +20,14 @@ public class Main {
         System.out.println("Model telefonu: " + telefon2.producent);
         System.out.println("Rodzaj zwierzecia: " + zwierze2.nazwaZwierzecia);
 
-        if(zwierze1.waga > zwierze2.waga) {
-            //System.out.println("Ciezszy jest: " + zwierze1.nazwaZwierzecia + ". Jego waga to: "+zwierze1.waga+" kg.");
-            StringBuilder wagaCase1 = new StringBuilder("Ciezszy jest: ").append(zwierze1.nazwaZwierzecia).append(". Jego waga to: ").append(zwierze1.waga).append(" kg.");
-            System.out.println(wagaCase1);
+        if(zwierze1.waga > zwierze2.waga){
+            System.out.println("Ciezszy jest: " + zwierze1.nazwaZwierzecia + ". Jego waga to: "+zwierze1.waga+" kg.");
         }
         else if(zwierze1.waga < zwierze2.waga){
-            //System.out.println("Ciezszy jest: " + zwierze2.nazwaZwierzecia + ". Jego waga to: "+zwierze2.waga+" kg.");
-            StringBuilder wagaCase2 = new StringBuilder("Ciezszy jest: ").append(zwierze2.nazwaZwierzecia).append(". Jego waga to: ").append(zwierze2.waga).append(" kg.");
-            System.out.println(wagaCase2);
+            System.out.println("Ciezszy jest: " + zwierze2.nazwaZwierzecia + ". Jego waga to: "+zwierze2.waga+" kg.");
         }
         else{
-            //System.out.println("Zwierzeta waza tyle samo: " + zwierze1.waga + "kg");
-            StringBuilder wagaCase3 = new StringBuilder("Zwierzeta waza tyle samo: ").append(zwierze1.waga).append("kg");
-            System.out.println(wagaCase3);
-        }
-
-        ArrayList<Human> humanslist = new ArrayList<>();
-        humanslist.add(czlowiek1);
-        humanslist.add(czlowiek2);
-
-        for(Human human : humanslist){
-            System.out.println(human.imie);
-        }
-
-        humanslist.add(czlowiek3);
-        System.out.println("------------------");
-        for(Human human : humanslist){
-            System.out.println(human.imie);
+            System.out.println("Zwierzeta waza tyle samo: " + zwierze1.waga + "kg");
         }
     }
 }
