@@ -16,10 +16,10 @@ public class Main {
         Car samochod1 = new Car(Producer.OPEL,"Astra","Bozy");
         Car samochod2 = new Car(Producer.BMW,"E30","Niebieski");
         Car samochod3 = new Car(Producer.AUDI,"A3","Czarny");
-        Human czlowiek1 = new Human("Adam",22,"niebieski");
-        Human czlowiek2 = new Human("Karol",30,"zielony");
-        Human czlowiek3 = new Human("Jan",15,"zielony");
-        Human czlowiek4 = new Human("Jan",15,"zielony");
+        Human czlowiek1 = new Human("Adam",22,"niebieski",3000.0);
+        Human czlowiek2 = new Human("Karol",30,"zielony",4000.0);
+        Human czlowiek3 = new Human("Jan",15,"zielony",5000.0);
+        Human czlowiek4 = new Human("Jan",15,"zielony",6000.0);
         Phone telefon1 = new Phone("iPhone", "czerwony", 5.5);
         Phone telefon2 = new Phone("Samsung", "szary", 5.7);
 
@@ -62,5 +62,8 @@ public class Main {
         else System.out.println("TRUE");
 
         System.out.println(czlowiek1);
+
+        czlowiek1.setSalary(-750.0);
+        czlowiek1.setSalary(1550.0);
     }
 }
