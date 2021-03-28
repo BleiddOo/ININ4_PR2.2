@@ -10,4 +10,13 @@ public class Phone {
         this.kolorObudowy = kolorObudowy;
         this.wielkoscEkranu = wielkoscEkranu;
     }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "producent='" + producent + '\'' +
+                ", kolorObudowy='" + kolorObudowy + '\'' +
+                ", wielkoscEkranu=" + wielkoscEkranu +
+                '}';
+    }
 }

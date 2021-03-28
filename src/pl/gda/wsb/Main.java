@@ -11,12 +11,13 @@ public class Main {
         Animal zwierze1 = new Animal("Azor","pies");
         Animal zwierze2 = new Animal("Maurycy","kot");
         Animal zwierze3 = new Animal("Tom","mysz");
-        Car samochod1 = new Car("Opel","Astra","Bozy");
-        Car samochod2 = new Car("Ford","Mustang","Niebieski");
-        Car samochod3 = new Car("Audi","A3","Czarny");
+        Car samochod1 = new Car(Producer.OPEL,"Astra","Bozy");
+        Car samochod2 = new Car(Producer.BMW,"E30","Niebieski");
+        Car samochod3 = new Car(Producer.AUDI,"A3","Czarny");
         Human czlowiek1 = new Human("Adam",22,"niebieski");
         Human czlowiek2 = new Human("Karol",30,"zielony");
         Human czlowiek3 = new Human("Jan",15,"zielony");
+        Human czlowiek4 = new Human("Jan",15,"zielony");
         Phone telefon1 = new Phone("iPhone", "czerwony", 5.5);
         Phone telefon2 = new Phone("Samsung", "szary", 5.7);
 
@@ -54,5 +55,10 @@ public class Main {
         zwierze1.feed();
         zwierze3.takeForAWalk();
         zwierze3.takeForAWalk();
+
+        if(czlowiek3.equals(czlowiek4)) System.out.println("TRUE");
+        else System.out.println("TRUE");
+
+        System.out.println(czlowiek1);
     }
 }
