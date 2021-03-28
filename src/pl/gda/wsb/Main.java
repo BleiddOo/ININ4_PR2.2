@@ -14,9 +14,9 @@ public class Main {
         Car samochod1 = new Car("Opel","Astra","Bozy");
         Car samochod2 = new Car("Ford","Mustang","Niebieski");
         Car samochod3 = new Car("Audi","A3","Czarny");
-        Human czlowiek1 = new Human("Adam",22,"niebieski", samochod1);
-        Human czlowiek2 = new Human("Karol",30,"zielony",samochod2);
-        Human czlowiek3 = new Human("Jan",15,"zielony", samochod3);
+        Human czlowiek1 = new Human("Adam",22,"niebieski");
+        Human czlowiek2 = new Human("Karol",30,"zielony");
+        Human czlowiek3 = new Human("Jan",15,"zielony");
         Phone telefon1 = new Phone("iPhone", "czerwony", 5.5);
         Phone telefon2 = new Phone("Samsung", "szary", 5.7);
 
@@ -36,16 +36,19 @@ public class Main {
         else{
             System.out.println("Zwierzeta waza tyle samo: " + zwierze1.getWaga() + "kg");
         }
-        ArrayList<Human> humanslist = new ArrayList<>();
-        humanslist.add(czlowiek1);
-        humanslist.add(czlowiek2);
-
-        for(Human human : humanslist){
-            System.out.println(human.imie+" "+ human.car.model);
+        ArrayList<Human> humansList = new ArrayList<>();
+        humansList.add(czlowiek1);
+        humansList.add(czlowiek2);
+        czlowiek1.car = samochod1;
+        czlowiek2.car = samochod2;
+        czlowiek1.pet = zwierze1;
+        czlowiek2.pet = zwierze2;
+        for(Human human : humansList){
+            System.out.println(human.imie+" "+ human.car.model +" "+human.pet.gatunek);
         }
-        humanslist.add(czlowiek3);
+        humansList.add(czlowiek3);
         System.out.println("-------------");
-        for(Human human : humanslist){
+        for(Human human : humansList){
             System.out.println(human.imie);
         }
         zwierze1.feed();
