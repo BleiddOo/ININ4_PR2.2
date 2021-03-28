@@ -8,8 +8,9 @@ public class Main {
     public static void main(String[] args) {
 	    System.out.println("Hello world");
 	    System.out.println("Hello world2");
-        Animal zwierze1 = new Animal("Pies","Ssak",10);
-        Animal zwierze2 = new Animal("Kot","Ssak",5);
+        Animal zwierze1 = new Animal("Azor","pies");
+        Animal zwierze2 = new Animal("Maurycy","kot");
+        Animal zwierze3 = new Animal("Tom","mysz");
         Human czlowiek1 = new Human("Adam",22,"niebieski");
         Human czlowiek2 = new Human("Karol",30,"zielony");
         Human czlowiek3 = new Human("Jan",15,"zielony");
@@ -22,14 +23,14 @@ public class Main {
         System.out.println("Model telefonu: " + telefon2.producent);
         System.out.println("Rodzaj zwierzecia: " + zwierze2.nazwaZwierzecia);
 
-        if(zwierze1.waga > zwierze2.waga){
-            System.out.println("Ciezszy jest: " + zwierze1.nazwaZwierzecia + ". Jego waga to: "+zwierze1.waga+" kg.");
+        if(zwierze1.getWaga() > zwierze2.getWaga()){
+            System.out.println("Ciezszy jest: " + zwierze1.nazwaZwierzecia + ". Jego waga to: "+zwierze1.getWaga()+" kg.");
         }
-        else if(zwierze1.waga < zwierze2.waga){
-            System.out.println("Ciezszy jest: " + zwierze2.nazwaZwierzecia + ". Jego waga to: "+zwierze2.waga+" kg.");
+        else if(zwierze1.getWaga() < zwierze2.getWaga()){
+            System.out.println("Ciezszy jest: " + zwierze2.nazwaZwierzecia + ". Jego waga to: "+zwierze2.getWaga()+" kg.");
         }
         else{
-            System.out.println("Zwierzeta waza tyle samo: " + zwierze1.waga + "kg");
+            System.out.println("Zwierzeta waza tyle samo: " + zwierze1.getWaga() + "kg");
         }
         ArrayList<Human> humanslist = new ArrayList<>();
         humanslist.add(czlowiek1);
@@ -43,5 +44,8 @@ public class Main {
         for(Human human : humanslist){
             System.out.println(human.imie);
         }
+        zwierze1.feed();
+        zwierze3.takeForAWalk();
+        zwierze3.takeForAWalk();
     }
 }

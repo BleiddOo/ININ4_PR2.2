@@ -4,7 +4,7 @@ public class Human {
     String imie;
     int wiek;
     String kolorOczu;
-
+    Animal pet;
     public Human(String imie, int wiek, String kolorOczu) {
         this.imie = imie;
         this.wiek = wiek;
