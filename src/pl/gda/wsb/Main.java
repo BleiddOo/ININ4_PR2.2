@@ -11,11 +11,15 @@ public class Main {
         Animal zwierze1 = new Animal("Azor","pies");
         Animal zwierze2 = new Animal("Maurycy","kot");
         Animal zwierze3 = new Animal("Tom","mysz");
-        Human czlowiek1 = new Human("Adam",22,"niebieski");
-        Human czlowiek2 = new Human("Karol",30,"zielony");
-        Human czlowiek3 = new Human("Jan",15,"zielony");
+        Car samochod1 = new Car("Opel","Astra","Bozy");
+        Car samochod2 = new Car("Ford","Mustang","Niebieski");
+        Car samochod3 = new Car("Audi","A3","Czarny");
+        Human czlowiek1 = new Human("Adam",22,"niebieski", samochod1);
+        Human czlowiek2 = new Human("Karol",30,"zielony",samochod2);
+        Human czlowiek3 = new Human("Jan",15,"zielony", samochod3);
         Phone telefon1 = new Phone("iPhone", "czerwony", 5.5);
         Phone telefon2 = new Phone("Samsung", "szary", 5.7);
+
         System.out.println("Imie: " + czlowiek1.imie);
         System.out.println("Model telefonu: " + telefon1.producent);
         System.out.println("Rodzaj zwierzecia: " + zwierze1.nazwaZwierzecia);
@@ -37,7 +41,7 @@ public class Main {
         humanslist.add(czlowiek2);
 
         for(Human human : humanslist){
-            System.out.println(human.imie);
+            System.out.println(human.imie+" "+ human.car.model);
         }
         humanslist.add(czlowiek3);
         System.out.println("-------------");
