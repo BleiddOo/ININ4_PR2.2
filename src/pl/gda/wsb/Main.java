@@ -1,6 +1,8 @@
 package pl.gda.wsb;
 
-import java.sql.SQLOutput;
+import pl.gda.wsb.devices.Car;
+import pl.gda.wsb.devices.Phone;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -22,10 +24,10 @@ public class Main {
         Phone telefon2 = new Phone("Samsung", "szary", 5.7);
 
         System.out.println("Imie: " + czlowiek1.imie);
-        System.out.println("Model telefonu: " + telefon1.producent);
+        System.out.println("Model telefonu: " + telefon1.getProducent());
         System.out.println("Rodzaj zwierzecia: " + zwierze1.nazwaZwierzecia);
         System.out.println("Imie: " + czlowiek2.imie);
-        System.out.println("Model telefonu: " + telefon2.producent);
+        System.out.println("Model telefonu: " + telefon2.getProducent());
         System.out.println("Rodzaj zwierzecia: " + zwierze2.nazwaZwierzecia);
 
         if(zwierze1.getWaga() > zwierze2.getWaga()){
@@ -45,7 +47,7 @@ public class Main {
         czlowiek1.pet = zwierze1;
         czlowiek2.pet = zwierze2;
         for(Human human : humansList){
-            System.out.println(human.imie+" "+ human.car.model +" "+human.pet.gatunek);
+            System.out.println(human.imie+" "+ human.car.getModel() +" "+human.pet.gatunek);
         }
         humansList.add(czlowiek3);
         System.out.println("-------------");

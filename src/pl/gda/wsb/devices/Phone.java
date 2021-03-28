@@ -1,4 +1,4 @@
-package pl.gda.wsb;
+package pl.gda.wsb.devices;
 
 public class Phone {
     String producent;
@@ -9,6 +9,18 @@ public class Phone {
         this.producent = producent;
         this.kolorObudowy = kolorObudowy;
         this.wielkoscEkranu = wielkoscEkranu;
+    }
+
+    public String getProducent() {
+        return producent;
+    }
+
+    public String getKolorObudowy() {
+        return kolorObudowy;
+    }
+
+    public double getWielkoscEkranu() {
+        return wielkoscEkranu;
     }
 
     @Override
