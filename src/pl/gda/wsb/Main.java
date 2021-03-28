@@ -13,9 +13,9 @@ public class Main {
         Animal zwierze1 = new Animal("Azor","pies");
         Animal zwierze2 = new Animal("Maurycy","kot");
         Animal zwierze3 = new Animal("Tom","mysz");
-        Car samochod1 = new Car(Producer.OPEL,"Astra","Bozy");
-        Car samochod2 = new Car(Producer.BMW,"E30","Niebieski");
-        Car samochod3 = new Car(Producer.AUDI,"A3","Czarny");
+        Car samochod1 = new Car(Producer.OPEL,"Astra","Bozy",60000.0);
+        Car samochod2 = new Car(Producer.BMW,"E30","Niebieski",10000.0);
+        Car samochod3 = new Car(Producer.AUDI,"A3","Czarny",6000.0);
         Human czlowiek1 = new Human("Adam",22,"niebieski",3000.0);
         Human czlowiek2 = new Human("Karol",30,"zielony",4000.0);
         Human czlowiek3 = new Human("Jan",15,"zielony",5000.0);
@@ -42,12 +42,12 @@ public class Main {
         ArrayList<Human> humansList = new ArrayList<>();
         humansList.add(czlowiek1);
         humansList.add(czlowiek2);
-        czlowiek1.car = samochod1;
-        czlowiek2.car = samochod2;
+        czlowiek1.setCar(samochod1);
+        czlowiek2.setCar(samochod2);
         czlowiek1.pet = zwierze1;
         czlowiek2.pet = zwierze2;
         for(Human human : humansList){
-            System.out.println(human.imie+" "+ human.car.getModel() +" "+human.pet.gatunek);
+            System.out.println(human.imie);
         }
         humansList.add(czlowiek3);
         System.out.println("-------------");
@@ -65,5 +65,9 @@ public class Main {
 
         czlowiek1.setSalary(-750.0);
         czlowiek1.setSalary(1550.0);
+
+        czlowiek1.setCar(samochod3);
+        czlowiek4.setCar(samochod3);
+        czlowiek1.setCar(samochod1);
     }
 }

@@ -2,6 +2,7 @@ package pl.gda.wsb;
 
 import pl.gda.wsb.devices.Car;
 
+import javax.lang.model.type.NullType;
 import java.util.Date;
 import java.util.Objects;
 
@@ -11,7 +12,25 @@ public class Human {
     String kolorOczu;
     private Double salary;
     Animal pet;
-    Car car;
+    private Car car;
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        if(salary >= car.getWartosc()){
+            System.out.println("Udalo sie kupic za gotowke.");
+            this.car = car;
+        }else if(salary >= car.getWartosc() / 12.0){
+            System.out.println("Udalo sie kupic auto na kredyt.");
+            this.car = car;
+        }else{
+            System.out.println("Nie stac cie na ten samochod");
+
+        }
+
+    }
 
     public Double getSalary() {
         System.out.println(new Date() + ": Pobrano informacje o wysklosci zarobkow - "+this);
