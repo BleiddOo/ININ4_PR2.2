@@ -1,18 +1,17 @@
 package pl.gda.wsb.devices;
-
-public class Phone {
-    String producent;
+import  pl.gda.wsb.Producer;
+public class Phone extends Device {
     String kolorObudowy;
     double wielkoscEkranu;
 
-    public Phone(String producent, String kolorObudowy, double wielkoscEkranu) {
-        this.producent = producent;
+    public Phone(Producer producer, String kolorObudowy, double wielkoscEkranu,String model, Integer yearOfProduction ) {
+        super(producer,model,yearOfProduction);
         this.kolorObudowy = kolorObudowy;
         this.wielkoscEkranu = wielkoscEkranu;
     }
 
     public String getProducent() {
-        return producent;
+        return producer.name();
     }
 
     public String getKolorObudowy() {
@@ -24,9 +23,14 @@ public class Phone {
     }
 
     @Override
+    public void turnOn() {
+
+    }
+
+    @Override
     public String toString() {
         return "Phone{" +
-                "producent='" + producent + '\'' +
+                "producent='" + producer + '\'' +
                 ", kolorObudowy='" + kolorObudowy + '\'' +
                 ", wielkoscEkranu=" + wielkoscEkranu +
                 '}';
